@@ -1,0 +1,60 @@
+<p><b>Problema</b>: Sa se afiseze primii n termeni ai sirului lui Fibonacci. Sirul are primii doi termeni egali cu 1 si
+    fiecare dintre urmatorii termeni este egal cu suma dintre precedentul si ante-precedentul.
+</p>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#004a43; ">#</span><span style="color:#004a43; ">include</span><span
+        style="color:#800000; ">&lt;</span><span style="color:#40015a; ">iostream</span><span style="color:#800000; ">&gt;</span>
+<span style="color:#800000; font-weight:bold; ">using</span> <span
+            style="color:#800000; font-weight:bold; ">namespace</span> <span style="color:#666616; ">std</span><span
+            style="color:#800080; ">;</span>
+<span style="color:#800000; font-weight:bold; ">int</span> <span style="color:#400000; ">main</span><span
+            style="color:#808030; ">(</span><span style="color:#808030; ">)</span>
+<span style="color:#800080; ">{</span>
+    <span style="color:#800000; font-weight:bold; ">int</span> n<span style="color:#800080; ">;</span>
+    <span style="color:#603000; ">cout</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span
+            style="color:#800000; ">"</span><span style="color:#0000e6; ">n = </span><span
+            style="color:#800000; ">"</span><span style="color:#800080; ">;</span>
+    <span style="color:#603000; ">cin</span> <span style="color:#808030; ">&gt;</span><span
+            style="color:#808030; ">&gt;</span> n<span style="color:#800080; ">;</span>
+    <span style="color:#800000; font-weight:bold; ">int</span> nr_2<span style="color:#808030; ">,</span> nr_1<span
+            style="color:#808030; ">,</span> nr_0<span style="color:#800080; ">;</span>
+    nr_0 <span style="color:#808030; ">=</span> <span style="color:#008c00; ">1</span><span
+            style="color:#800080; ">;</span>
+    nr_1 <span style="color:#808030; ">=</span> <span style="color:#008c00; ">1</span><span
+            style="color:#800080; ">;</span>
+    <span style="color:#603000; ">cout</span> <span style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> nr_0 <span
+            style="color:#808030; ">&lt;</span><span style="color:#808030; ">&lt;</span> <span
+            style="color:#800000; ">"</span><span style="color:#0f69ff; ">\n</span><span
+            style="color:#800000; ">"</span> <span style="color:#808030; ">&lt;</span><span
+            style="color:#808030; ">&lt;</span> nr_1 <span style="color:#808030; ">&lt;</span><span
+            style="color:#808030; ">&lt;</span> <span style="color:#800000; ">"</span><span
+            style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span
+            style="color:#800080; ">;</span>
+    <span style="color:#800000; font-weight:bold; ">for</span><span style="color:#808030; ">(</span><span
+            style="color:#800000; font-weight:bold; ">int</span> i <span style="color:#808030; ">=</span> <span
+            style="color:#008c00; ">3</span><span style="color:#800080; ">;</span> i <span
+            style="color:#808030; ">&lt;</span><span style="color:#808030; ">=</span> n<span
+            style="color:#800080; ">;</span> i<span style="color:#808030; ">+</span><span
+            style="color:#808030; ">+</span><span style="color:#808030; ">)</span>
+    <span style="color:#800080; ">{</span>
+        nr_2 <span style="color:#808030; ">=</span> nr_1 <span style="color:#808030; ">+</span> nr_0<span
+            style="color:#800080; ">;</span>
+        nr_0 <span style="color:#808030; ">=</span> nr_1<span style="color:#800080; ">;</span>
+        nr_1 <span style="color:#808030; ">=</span> nr_2<span style="color:#800080; ">;</span>
+        <span style="color:#603000; ">cout</span> <span style="color:#808030; ">&lt;</span><span
+            style="color:#808030; ">&lt;</span> nr_2 <span style="color:#808030; ">&lt;</span><span
+            style="color:#808030; ">&lt;</span> <span style="color:#800000; ">"</span><span
+            style="color:#0f69ff; ">\n</span><span style="color:#800000; ">"</span><span
+            style="color:#800080; ">;</span>
+    <span style="color:#800080; ">}</span>
+    <span style="color:#800000; font-weight:bold; ">return</span> <span style="color:#008c00; ">0</span><span
+            style="color:#800080; ">;</span>
+<span style="color:#800080; ">}</span>
+</pre>
+<script>
+    $(document).ready(function () {
+        hljs.initHighlightingOnLoad();
+    });
+</script>
+
+

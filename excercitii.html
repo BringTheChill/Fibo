@@ -1,0 +1,81 @@
+<ol>
+    <li><p>Se dă un număr natural <b>n</b>. Să se afişeze în ordine crescătoare, primii n termeni ai şirului lui
+        Fibonacci.
+    </p></li>
+    <li><p>Se dă un număr natural <b>n</b>. Să se afişeze în ordine crescătoare, termenii şirului lui Fibonacci mai mici
+        sau
+        egali cu <b>n</b>.</p></li>
+    <li><p>Se dă un număr natural <b>n</b> și două numere întregi <b>a</b> și <b>b</b>. Să se afişeze în ordine
+        crescătoare, termenii şirului lui
+        Fibonacci generalizat cu valoarea absolută mai mică sau egală cu <b>n</b>.</p></li>
+    <li><p>Se dau <b>n</b> numere naturale. Să se verifice despre fiecare dacă este termen al şirului lui Fibonacci.</p>
+    </li>
+    <li><p>Se dă un număr natural <b>n</b>. Să se descompună în sumă cu număr minim de termeni ai şirului lui Fibonacci.
+    </p></li>
+    <h2>Rezolvare Javascript:</h2>
+    <div class="row">
+        <div class="col-4">
+            <p>Exercitiul 1</p>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" id="value_1" type="number" value="">
+                </div>
+                <div class="col-6">
+                    <button type="button" onclick="afis1()" class="btn btn-outline-primary">Fibo</button>
+                </div>
+                <div class="col-12" id="prob1"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <p>Exercitiul 2</p>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" id="value_2" type="number" value="">
+                </div>
+                <div class="col-6">
+                    <button type="button" onclick="" class="btn btn-outline-primary">Fibo</button>
+                </div>
+                <div class="col-12" id="prob2"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <p>Exercitiul 3</p>
+            <div class="row">
+                <div class="col-6">
+                    <input class="form-control" id="value_3" type="number" value="">
+                </div>
+                <div class="col-6">
+                    <button type="button" onclick="" class="btn btn-outline-primary">Fibo</button>
+                </div>
+                <div class="col-12" id="prob3"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</ol>
+
+
+<script>
+    var fibonacci_series = function (n) {
+        if (n === 1) {
+            return [0, 1];
+        } else {
+            var s = fibonacci_series(n - 1);
+            s.push(s[s.length - 1] + s[s.length - 2]);
+            return s;
+        }
+    };
+
+    function afis1() {
+
+        number = document.getElementById("value_1").value;
+
+        if (number == 1)
+            document.getElementById("prob1").innerHTML = 0;
+        else
+            document.getElementById("prob1").innerHTML = fibonacci_series(number - 1);
+    }
+
+    // function afis2(){
+    // }
+</script>
