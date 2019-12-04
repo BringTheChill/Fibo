@@ -14,16 +14,18 @@
     </p></li>
     <h2>Rezolvare Javascript:</h2>
     <div class="row">
-        <div class="col-4">
-            <p>Exercitiul 1</p>
-            <div class="row">
+        <div class="col-4 card">
+            <div class="card-header">
+                Exercitiul 1
+            </div>
+            <div class="row card-body">
                 <div class="col-6">
                     <input class="form-control" id="value_1" type="number" value="">
                 </div>
                 <div class="col-6">
                     <button type="button" onclick="afis1()" class="btn btn-outline-primary">Fibo</button>
                 </div>
-                <div class="col-12" id="prob1"></div>
+                <div class="col-12" id="prob1" style="margin-top: 20px;"></div>
             </div>
         </div>
         <div class="col-4">
@@ -33,7 +35,7 @@
                     <input class="form-control" id="value_2" type="number" value="">
                 </div>
                 <div class="col-6">
-                    <button type="button" onclick="" class="btn btn-outline-primary">Fibo</button>
+                    <button type="button" onclick="afis2()" class="btn btn-outline-primary">Fibo</button>
                 </div>
                 <div class="col-12" id="prob2"></div>
             </div>
@@ -76,6 +78,13 @@
             document.getElementById("prob1").innerHTML = fibonacci_series(number - 1);
     }
 
-    // function afis2(){
-    // }
+    function afis2(){
+         number = document.getElementById("value_2").value;
+
+        if (number == 1)
+            document.getElementById("prob2").innerHTML = 0;
+        else
+            var array = document.getElementById("prob2").innerHTML = fibonacci_series(number - 1);
+            return array.reverse();
+    }
 </script>
